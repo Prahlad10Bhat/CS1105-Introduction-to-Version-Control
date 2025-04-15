@@ -1,0 +1,35 @@
+##TASK-1: 
+
+git init my-repo
+touch main.py
+echo 'print("Hello, World!")' > main.py
+git add main.py
+git commit -m "Initial commit with main.py"
+echo 'print("This is a new change.")' >> main.py
+git stash
+git checkout -b feature-branch
+touch feature.py
+echo 'print("Feature branch code.")' > feature.py
+git add feature.py
+git commit -m "Add feature.py"
+git checkout main
+git stash apply
+git add main.py
+git commit -m "Apply stashed changes to main.py"
+git status
+git log --oneline --graph --all
+
+
+##TASK-2:
+
+git checkout -b feature1
+touch notes.txt
+echo "This is a note." > notes.txt
+git add notes.txt
+git commit -m "Add notes.txt"
+git checkout main
+git log feature1 --oneline
+git cherry-pick 8dedea6
+git log --oneline --graph --all
+git remote add origin https://github.com/Prahlad10Bhat/my-repo.git
+git push origin main
