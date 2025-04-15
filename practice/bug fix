@@ -1,0 +1,6 @@
+git clone https://github.com/Prahlad10Bhat/test-repo.git
+cd test-repo
+git checkout -b bug-fix
+git add error_log.txt
+git commit -m "Correct spelling and formatting errors in error_log.txt"
+git push origin bug-fix
